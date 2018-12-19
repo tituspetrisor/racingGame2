@@ -9,10 +9,10 @@ public class App {
         //declaring variable and instantiating a car object
         // this is also called initializing a variable
         Car firstCompetitor= new Car(new Engine());
-        firstCompetitor.name = "Dacia";
-        firstCompetitor.color = "black";
+        firstCompetitor.setName("Dacia");
+        firstCompetitor.setColor("black");
         firstCompetitor.doorCount = 5;
-        firstCompetitor.mileage = 9.5;
+        firstCompetitor.setMileage(9.5);
         firstCompetitor.running = false;
 //local varibles are variables declared inside a methode
 //        they don'r receive default value
