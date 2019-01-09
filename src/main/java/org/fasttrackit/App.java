@@ -11,11 +11,12 @@ public class App {
         Car firstCompetitor= new Car(new Engine());
         firstCompetitor.setName("Dacia");
         firstCompetitor.setColor("black");
-        firstCompetitor.doorCount = 5;
+        firstCompetitor.setMileage(5);
         firstCompetitor.setMileage(9.5);
         firstCompetitor.running = false;
 //local varibles are variables declared inside a methode
 //        they don'r receive default value
+
 
 
         Engine firstEngine = new Engine();
@@ -37,6 +38,23 @@ public class App {
 
         firstCompetitor.accelerate(100, 30);
         double travelDistance = firstCompetitor.accelerate(10, 30);
+        Vehicle vehicle1 = new Vehicle();
+        Vehicle.applicationTotalNumberOfVehicle = 1;
+        System.out.println("Total from vehicle 1: " + Vehicle.applicationTotalNumberOfVehicle);
+        // that it is true!!!!!
+
+
+        Vehicle vehicle2 = new Vehicle();
+        vehicle2.applicationTotalNumberOfVehicle = 2;
+        System.out.println("Total from vehicle 2: " + vehicle2.applicationTotalNumberOfVehicle);
+
+
+        System.out.println("Total from vehicle 2: " + vehicle2.applicationTotalNumberOfVehicle);
+        System.out.println("Total from vehicle 1: " + vehicle1.applicationTotalNumberOfVehicle);
+
+
+
+
 
     }
     }
