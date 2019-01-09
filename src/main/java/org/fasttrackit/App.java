@@ -1,5 +1,7 @@
 package org.fasttrackit;
 
+import org.fasttrackit.cheater.CheatingCar;
+
 /**
  * Hello world!
  *
@@ -21,6 +23,8 @@ public class App {
 
         Engine firstEngine = new Engine();
         firstEngine.manufacturer = "Renault";
+
+        System.out.println(firstEngine);
 
 
 //sout print the message to the console
@@ -51,6 +55,11 @@ public class App {
 
         System.out.println("Total from vehicle 2: " + vehicle2.applicationTotalNumberOfVehicle);
         System.out.println("Total from vehicle 1: " + vehicle1.applicationTotalNumberOfVehicle);
+
+
+        CheatingCar firstCheating = new CheatingCar();
+        firstCheating.accelerate(20,1);
+
 
 
 

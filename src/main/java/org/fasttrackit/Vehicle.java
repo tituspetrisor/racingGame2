@@ -10,7 +10,7 @@ public class Vehicle {
 
 
     public double accelerate (double speed, double durationInHour){
-        System.out.println(name + " accelerated with " + speed + " km/h " + durationInHour + " minutes. ");
+        System.out.println(name + " accelerated with " + speed + " km/h " + durationInHour + " hour. ");
             double distnace = speed * durationInHour;
         System.out.println("Traveled distance: " + distnace + " KM/H");
             return distnace;
@@ -20,6 +20,11 @@ public class Vehicle {
     public double accelerate (double speed){
         return accelerate( speed, 1);
 
+    }
+
+    //metoda folosita pentru demonstrarea co-variant return type
+    public Vehicle returnSomeVehicle(){
+        return this;
     }
 
     public String getName() {
