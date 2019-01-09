@@ -61,6 +61,12 @@ public class App {
         firstCheating.accelerate(20,1);
 
 
+        Vehicle cheatingCar = new CheatingCar();
+        cheatingCar.accelerate(20, 2);
+
+        //type casting
+        ((CheatingCar) cheatingCar).test();
+
 
 
 
