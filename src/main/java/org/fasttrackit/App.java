@@ -59,7 +59,7 @@ public class App {
         CheatingCar firstCheating = new CheatingCar();
         firstCheating.accelerate(20,1);
 
-
+        //polymorfism
         Vehicle cheatingCar = new CheatingCar();
         cheatingCar.accelerate(20, 2);
         //type casting
@@ -69,6 +69,12 @@ public class App {
         System.out.println(4%2);
         System.out.println(4%3);
 
+
+
+        Game game = new Game();
+        game.addTrack(0, new Track("Highway", 300));
+        game.addTrack(1, new Track("Seaside", 100));
+        game.displayAvailableTracks();
 
 
 

@@ -21,7 +21,6 @@ public class Vehicle {
         totalKm += distnace;
         System.out.println("Total travel distance" + totalKm);
 
-
             return distnace;
 
     }
