@@ -75,7 +75,8 @@ public class App {
         game.addTrack(0, new Track("Highway", 300));
         game.addTrack(1, new Track("Seaside", 100));
         game.displayAvailableTracks();
-
+        game.addCompetitors(2);
+        game.displayCompetitors();
 
 
 
