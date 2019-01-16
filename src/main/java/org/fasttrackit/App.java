@@ -23,7 +23,6 @@ public class App {
 
         Engine firstEngine = new Engine();
         firstEngine.manufacturer = "Renault";
-
         System.out.println(firstEngine);
 
 
@@ -63,9 +62,12 @@ public class App {
 
         Vehicle cheatingCar = new CheatingCar();
         cheatingCar.accelerate(20, 2);
-
         //type casting
         ((CheatingCar) cheatingCar).test();
+
+        //modulo operator
+        System.out.println(4%2);
+        System.out.println(4%3);
 
 
 
