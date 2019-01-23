@@ -5,13 +5,14 @@ import org.fasttrackit.Vehicle;
 
 public class CheatingCar extends Vehicle {
     @Override
-    public double accelerate (double speed, double durationInHour){
+    public double accelerate(double speed, double durationInHour) {
         System.out.println(getName() + " accelerated with " + speed + " km/h " + durationInHour + " hour. ");
-        double distnace =2 * speed * durationInHour;
+        double distnace = 2 * speed * durationInHour;
         System.out.println("Traveled distance: " + distnace + " KM/H");
         return distnace;
     }
-//    @Override
+
+    //    @Override
 //    public double accelerate (double speed, double durationInHour){
 //        double cheatingSpeed = 2 * speed;
 //        return super.accelerate(cheatingSpeed, durationInHour);
@@ -24,7 +25,7 @@ public class CheatingCar extends Vehicle {
         return new AutoVehicle();
     }
 
-    public void test(){
+    public void test() {
         System.out.println("test");
     }
 }

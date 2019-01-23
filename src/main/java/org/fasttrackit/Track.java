@@ -8,7 +8,7 @@ public class Track {
         this.name = name;
         this.length = length;
     }
-    
+
 
     public String getName() {
         return name;
@@ -28,9 +28,8 @@ public class Track {
 
     @Override
     public String toString() {
-        return "Track{" +
-                "name='" + name + '\'' +
-                ", length=" + length +
-                '}';
+        return
+                 name +
+                ", length=" + length;
     }
 }

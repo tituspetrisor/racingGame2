@@ -4,13 +4,12 @@ import org.fasttrackit.cheater.CheatingCar;
 
 /**
  * Hello world!
- *
  */
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //declaring variable and instantiating a car object
         // this is also called initializing a variable
-        Car firstCompetitor= new Car(new Engine());
+        Car firstCompetitor = new Car(new Engine());
         firstCompetitor.setName("Dacia");
         firstCompetitor.setColor("black");
         firstCompetitor.setMileage(5);
@@ -20,7 +19,6 @@ public class App {
 //        they don'r receive default value
 
 
-
         Engine firstEngine = new Engine();
         firstEngine.manufacturer = "Renault";
         System.out.println(firstEngine);
@@ -28,7 +26,6 @@ public class App {
 
 //sout print the message to the console
         System.out.println(firstEngine.manufacturer);
-
 
 
         firstCompetitor.engine = firstEngine;
@@ -57,7 +54,7 @@ public class App {
 
 
         CheatingCar firstCheating = new CheatingCar();
-        firstCheating.accelerate(20,1);
+        firstCheating.accelerate(20, 1);
 
         //polymorfism
         Vehicle cheatingCar = new CheatingCar();
@@ -66,21 +63,15 @@ public class App {
         ((CheatingCar) cheatingCar).test();
 
         //modulo operator
-        System.out.println(4%2);
-        System.out.println(4%3);
-
+        System.out.println(4 % 2);
+        System.out.println(4 % 3);
 
 
         Game game = new Game();
-        game.addTrack(0, new Track("Highway", 300));
-        game.addTrack(1, new Track("Seaside", 100));
-        game.displayAvailableTracks();
-        game.addCompetitors(2);
-        game.displayCompetitors();
-
+        game.start();
 
 
     }
-    }
+}
 
 

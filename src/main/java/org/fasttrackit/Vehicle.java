@@ -9,10 +9,9 @@ public class Vehicle {
     private double fuelLevel = 70;
 
 
-
-    public double accelerate (double speed, double durationInHour){
+    public double accelerate(double speed, double durationInHour) {
         System.out.println(name + " accelerated with " + speed + " km/h " + durationInHour + " hour. ");
-            double distnace = speed * durationInHour;
+        double distnace = speed * durationInHour;
         System.out.println("Traveled distance: " + distnace + " KM/H");
         double spentFuel = distnace * mileage / 100;
         System.out.println("Remaining fuel: " + fuelLevel);
@@ -21,17 +20,18 @@ public class Vehicle {
         totalKm += distnace;
         System.out.println("Total travel distance" + totalKm);
 
-            return distnace;
+        return distnace;
 
     }
+
     // method overloading
-    public double accelerate (double speed){
-        return accelerate( speed, 1);
+    public double accelerate(double speed) {
+        return accelerate(speed, 1);
 
     }
 
     //metoda folosita pentru demonstrarea co-variant return type
-    public Vehicle returnSomeVehicle(){
+    public Vehicle returnSomeVehicle() {
         return this;
     }
 
@@ -42,6 +42,7 @@ public class Vehicle {
     public void setFuleLevel(double fuleLevel) {
         this.fuelLevel = fuleLevel;
     }
+
     public String getName() {
         return name;
     }

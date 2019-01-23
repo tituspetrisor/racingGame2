@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class AutoVehicle extends Vehicle{
+public class AutoVehicle extends Vehicle {
 
     Engine engine;
     boolean running;
@@ -8,8 +8,9 @@ public class AutoVehicle extends Vehicle{
     public AutoVehicle(Engine engine) {
         this.engine = engine;
     }
+
     //overload
-    public AutoVehicle(){
+    public AutoVehicle() {
         this(new Engine());
         //constructor overloading
     }
