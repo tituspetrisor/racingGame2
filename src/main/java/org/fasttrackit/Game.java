@@ -17,11 +17,27 @@ public class Game {
         displayCompetitors();
 //        Track track = getTrackFromUser();
         int trackNumber = getTrackFromUser();
-        Track track =  tracks[trackNumber-1];
+        Track track = tracks[trackNumber - 1];
         System.out.println("Choose track: " + track.getName());
 
+        boolean noWinnerYet = true;
+        int competitorsWithoutFuel = 0;
 
 
+        while (noWinnerYet && competitorsWithoutFuel < competitors.size()) {
+            for (Vehicle vehicle : competitors) {
+                double speed = getVehicleAccelerationFromUser();
+                vehicle.accelerate(speed);
+
+                    if(vehicle.getFuleLevel() <= 0){
+                        competitorsWithoutFuel++;
+                    }
+                if (vehicle.getTotalKm() >= track.getLength()) ;
+                noWinnerYet = false;
+                System.out.println("The winner is: " + vehicle.getName());
+                break;
+            }
+        }
 
 
     }
@@ -30,8 +46,8 @@ public class Game {
         System.out.println("Please choose your track: ");
         Scanner scanner = new Scanner(System.in);
         try {
-            return  scanner.nextInt();
-            }catch (InputMismatchException exception){
+            return scanner.nextInt();
+        } catch (InputMismatchException exception) {
 //            throw  new Exception("Expected an integer number");
             System.out.println("Expected an integer number");
             return getTrackFromUser();
@@ -53,8 +69,6 @@ public class Game {
 //        }
 
 
-
-
     public void addCompetitors(int competitorCount) {
         for (int i = 0; i < competitorCount; i++) {
             Vehicle vehicle = new Vehicle();
@@ -65,14 +79,14 @@ public class Game {
             competitors.add(vehicle);
 
             //se da un nr random
-            double mileage = ThreadLocalRandom.current().nextDouble(5,15);
+            double mileage = ThreadLocalRandom.current().nextDouble(5, 15);
             vehicle.setMileage(mileage);
             System.out.println("Your mileage is: " + mileage);
 
         }
     }
 
-    private double getVehicleAccelerationFromUser(){
+    private double getVehicleAccelerationFromUser() {
         System.out.println("Please eneter accelerate speed: ");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextDouble();
